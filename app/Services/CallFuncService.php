@@ -20,7 +20,7 @@ class CallFuncService
 
 
         $command = [];
-        $file = file(Storage::path($filename));
+        $file = file(Storage::disk('public')->path($filename));
 
         $arr = array_map('str_getcsv', $file);
 
